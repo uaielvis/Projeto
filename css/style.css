@@ -71,3 +71,29 @@ body {
 #navbar .navbar-container ul li:nth-child(3) {
 	border-right: 1px solid white;
 }
+/*estilo do banner principal "showcase"*/
+#showcase {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	background: url("/img/showcase.webp") center center/cover;
+	background-color: rgba(0, 0, 0, 0.4);
+	background-blend-mode: color;
+}
+
+#showcase .showcase-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#showcase .showcase-container h2 {
+	font-size: 5rem;
+}
+
+#showcase .showcase-container p {
+	margin: 15px 0;
+	font-size: 1.1rem;
+}
