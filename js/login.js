@@ -14,3 +14,11 @@ function validateForm(){
             localStorage.setItem("details", JSON.stringify(data));
         } 
 }
+// Verifique se a senha é compatível
+function verifyPassword(input){
+    if(input.value != document.getElementById("uPassword").value){
+        input.setCustomValidity("Password Must be Matching");
+    }else{
+        input.setCustomValidity("");
+    }
+}
