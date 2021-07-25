@@ -22,3 +22,20 @@ function verifyPassword(input){
         input.setCustomValidity("");
     }
 }
+// verificar usuários já registrados
+function emailExist(value){
+    let existemail = JSON.parse(localStorage.getItem("details"));
+    
+    let emailid = existemail.map((email,i,existemail) =>{
+        return existemail[i].email;
+    });
+
+     let getexistemail = emailid.filter((email)=>{
+        if(email == value.value){
+            value.setCustomValidity('email exist. try something else');
+            
+        }else{
+            value.setCustomValidity("");
+        }
+    });
+}
