@@ -39,3 +39,18 @@ function emailExist(value){
         }
     });
 }
+// Manipulando
+ const form = document.getElementById("registerForm");
+    form.addEventListener("submit", function(e){
+        e.preventDefault();
+        form.reset();
+        document.getElementById("thankYou").style.display="block";
+        form.style.display="none";
+    });
+
+    function showHide(show, hide){
+        let showEle = document.getElementById(show);
+        let hideEle = document.getElementById(hide);
+        showEle.style.display="block";
+        hideEle.style.display="none";
+    }
