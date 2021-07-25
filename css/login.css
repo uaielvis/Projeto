@@ -18,3 +18,17 @@ time, mark, audio, video {
  vertical-align:baseline;
  background:transparent;
 }
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+ 
+body {
+    margin: 0;
+    background: #f4fef4;
+    font:normal 14px/20px 'PT Sans', sans-serif;
+    color:#000;
+   }
+   ul {
+       list-style: none;
+   }
