@@ -54,3 +54,28 @@ function emailExist(value){
         showEle.style.display="block";
         hideEle.style.display="none";
     }
+     //login 
+    function loginUser(){
+        
+        let loginEmail = document.getElementById("uemailId").value;
+        let loginPass =  document.getElementById("ePassword").value;
+        let matchEmail = JSON.parse(localStorage.getItem("details"));
+        let emailArray =[];
+        let passArray=[];
+         let result = matchEmail.map((email, i, matchEmail) =>{
+        
+           emailArray.push(matchEmail[i].email);
+           passArray.push(matchEmail[i].password);
+        });
+       // console.log(emailArray);
+        if(emailArray.indexOf(loginEmail) > -1 && passArray.indexOf(loginPass) > -1){
+            console.log("You have sucsessfuly loged in");
+        }else{
+            console.log("You have no registered with us");
+        }
+      
+    }
+    const loginForm = document.getElementById("logIn");
+    loginForm.addEventListener("submit", function(e){
+        e.preventDefault();
+    });
