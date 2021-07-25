@@ -32,3 +32,19 @@ body {
    ul {
        list-style: none;
    }
+   article,aside,details,figcaption,figure,
+   footer,header,hgroup,menu,nav,section { 
+    display:block;
+   }
+   .container{
+       padding: 0 15px;
+        width: 100%;
+   }
+   .form-control {
+       margin: 50px auto;
+       width: 50%;
+   }
+   .form-control div {
+       background: #fff;
+       padding: 20px;
+   }
