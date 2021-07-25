@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Single Page App</title>
+    <link href="css/app.css" rel="stylesheet" type="text/css">
+   
+</head>
+<body>
+    <main>
+        <div class="container">
+            <form id="registerForm" method="POST" name="registration" class="form-control" onsubmit="return validateForm();">
+                <div>
+                    <h1>CRIE UMA CONTA</h1>
+                <ul>
+                    <li>
+                        <label for="uName">Nome</label>
+                        <input type="text" name="Name" id="uName" placeholder="Digite seu nome" required>
+                    </li>
+                    <li>
+                        <label for="uEmail">Email</label>
+                        <input type="email" name="Email" id="uEmail" placeholder="Digite seu email" oninput="emailExist(this)" required>
+                    </li>
+                    <li>
+                        <label for="uContactno">Contacto</label>
+                        <input type="phone" name="Contact No" id="uContactno" placeholder="Digite seu numero de contato">
+                    </li>
+                    <li>
+                        <label for="uPassword">Senha</label>
+                        <input type="password" name="Password" id="uPassword" placeholder="Digite sua senha" pattern=".{0}|.{6,}" required>
+                    </li>
+                    <li>
+                        <label for="confirmPassword">Confirme a senha</label>
+                        <input type="password" name="Confirm Password" id="confirmPassword" placeholder="Confirme a senha" oninput="verifyPassword(this)" required>
+                    </li>
+                    <li>
+                        <button type="submit" id="submit">Enviar</button>
+                        <span>Já tem uma conta? <a href="javascript:void(0);" onclick="showHide('logIn', 'registerForm')">Login agora</a></span>
+                    </li>
+                </ul>
+                </div>
+            </form>
+            <form id="thankYou" class="form-control" style="display: none;">
+                <div style="text-align: center">
+                    <h1>Obrigado!</h1>
+                    <p>Seu registro foi feito com sucesso. Você pode fazer<a href="javascript:void(0);" onclick="showHide('logIn', 'thankYou')">Login agora</a></p>
+                </div>
+            </form>
+            <form name="login" id="logIn" method="POST" class="form-control" onsubmit="return loginUser()" style="display: none;">
+                <div>
+                        <h1>LOG IN</h1>
+                <ul>
+                    <li>
+                        <label for="uemailId">Email Id</label>
+                        <input type="email" name="uemailId" id="uemailId" placeholder="Enter your email id" required>
+                    </li>
+                    <li>
+                            <label for="ePassword">Senha</label>
+                            <input type="password" name="ePassword" id="ePassword" placeholder="Enter your password" required>
+                        </li>
+                        <li>
+                                <button type="submit" id="login">Log In</button>
+                                <span>Novo aqui? <a href="javascript:void(0);" onclick="showHide('registerForm','logIn')">Registre-se agora.</a></span>
+                            </li>
+                </ul>
+            </div>
+            </form>
+        </div>
+    </main>
+
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
